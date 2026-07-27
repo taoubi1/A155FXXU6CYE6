@@ -224,7 +224,7 @@ vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
 vendor/etc/init/vendor.fptool.fingerprint@2.0-service.rc
 vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml
 vendor/etc/fsfp-config.xml
-vendor/lib64/hw/fsfingerprint.default.so;FIX_SONAME
+vendor/lib64/hw/fsfingerprint.default.so
 vendor/lib64/hw/vendor.fptool.fingerprint@2.0-impl.so
 vendor/lib64/vendor.fptool.fingerprint@2.0-adapter-helper.so
 vendor/lib64/vendor.fptool.fingerprint@2.0.so
@@ -275,10 +275,10 @@ vendor/lib64/libapu_mdw.so
 vendor/lib64/libapu_mdw_batch.so
 vendor/lib64/libapusys.so
 vendor/lib64/libapusys_edma.so
-vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.0.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.1.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.mediatek.hardware.apuware.hmp@1.0.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.0.so
+vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.1.so
+vendor/lib64/vendor.mediatek.hardware.apuware.hmp@1.0.so
+vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
 
 # Audio
 vendor/lib/libbwc.so
@@ -286,7 +286,7 @@ vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.
 vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/lib_iir.so
 vendor/lib64/lib_speech_enh.so
-vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v32.so;FIX_SONAME
+vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v32.so
 vendor/lib64/libaudio_param_parser-vnd.so
 vendor/lib64/libaudiocompensationfilter_vendor.so
 vendor/lib64/libaudiocompensationfilterc.so
@@ -832,7 +832,7 @@ vendor/lib64/mt6789/librmsclib1.so;SYMLINK=vendor/lib64/librmsclib1.so
 vendor/lib64/mt6789/libremosaic_wrapper.so;SYMLINK=vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/mt6789/libremosaiclib.so;SYMLINK=vendor/lib64/libremosaiclib.so
 vendor/lib64/mt6789/libsdk_sr.so;SYMLINK=vendor/lib64/libsdk_sr.so
-vendor/lib64/mt6789/libsegmention.so;SYMLINK=vendor/lib64/libsegmention.so;DISABLE_CHECKELF
+vendor/lib64/mt6789/libsegmention.so;SYMLINK=vendor/lib64/libsegmention.so
 vendor/lib64/mt6789/libsegmentionPre.so;SYMLINK=vendor/lib64/libsegmentionPre.so
 vendor/lib64/mt6789/libsmartdetector.so;SYMLINK=vendor/lib64/libsmartdetector.so
 vendor/lib64/mt6789/libst_mobile.so;SYMLINK=vendor/lib64/libst_mobile.so
@@ -1049,7 +1049,7 @@ vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 vendor/bin/kmsetkey_ca.trustonic
 vendor/etc/init/trustonic.mc_kmsetkey_ca.rc
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
-vendor/lib/libthha.so;DISABLE_CHECKELF
+vendor/lib/libthha.so
 vendor/lib64/hw/kmsetkey.trustonic.so;SYMLINK=vendor/lib64/hw/kmsetkey.default.so
 vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib64/libdecrypt.so
@@ -1078,7 +1078,7 @@ vendor/lib/mt6789/libvcodecdrv.so;SYMLINK=vendor/lib/libvcodecdrv.so
 vendor/lib/mt6789/libvcodecdrv_v3a.so;SYMLINK=vendor/lib/libvcodecdrv_v3a.so
 vendor/lib/mt6789/libvpudv3a_vcodec.so;SYMLINK=vendor/lib/libvpudv3a_vcodec.so
 vendor/lib/libvcodecdrv_header_stub.so
-vendor/lib/libvcodec_oal.so;DISABLE_CHECKELF
+vendor/lib/libvcodec_oal.so
 vendor/lib/libvcodec_utility_plat.mt6789.so
 vendor/lib64/libvpu.so
 
@@ -1095,20 +1095,20 @@ vendor/lib/AVCSecureVdecCA.so
 vendor/lib/HEVCSecureVdecCA.so
 vendor/lib/VP9SecureVdecCA.so
 vendor/lib/libAVCSecureVencCA.so
-vendor/lib/libHEVCdec_sa.ca7.android.so;DISABLE_CHECKELF
+vendor/lib/libHEVCdec_sa.ca7.android.so
 vendor/lib/libh264dec_customize.so
-vendor/lib/libh264dec_sa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libh264dec_sd.ca7.so;DISABLE_CHECKELF
-vendor/lib/libh264dec_se.ca7.so;DISABLE_CHECKELF
-vendor/lib/libh264enc_sa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
+vendor/lib/libh264dec_sa.ca7.so
+vendor/lib/libh264dec_sd.ca7.so
+vendor/lib/libh264dec_se.ca7.so
+vendor/lib/libh264enc_sa.ca7.so
+vendor/lib/libhevce_sb.ca7.android.so
 vendor/lib/libion_mtk.so
 vendor/lib/libion_ulit.so
-vendor/lib/libmp4enc_sa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libmp4enc_xa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libvp8dec_sa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libvp8enc_sa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libvp9dec_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libmp4enc_sa.ca7.so
+vendor/lib/libmp4enc_xa.ca7.so
+vendor/lib/libvp8dec_sa.ca7.so
+vendor/lib/libvp8enc_sa.ca7.so
+vendor/lib/libvp9dec_sa.ca7.so
 vendor/lib64/AVCSecureVdecCA.so
 vendor/lib64/HEVCSecureVdecCA.so
 vendor/lib64/VP9SecureVdecCA.so
@@ -1188,7 +1188,7 @@ system_ext/lib64/libapuwarexrp_v2.mtk.so
 system_ext/lib64/libarmnn_ndk.mtk.so
 system_ext/lib64/libcmdl_ndk.mtk.so
 system_ext/lib64/libneuron_graph_delegate.mtk.so
-system_ext/lib64/libneuronusdk_adapter.mtk.so;FIX_SONAME
+system_ext/lib64/libneuronusdk_adapter.mtk.so
 system_ext/lib64/libnir_neon_driver_ndk.mtk.so
 system_ext/lib64/libtflite_mtk.mtk.so
 system/lib64/libtflite_mtk.so:system_ext/lib64/libtflite_mtk.so
@@ -1214,11 +1214,11 @@ vendor/lib64/libarmnn.so
 vendor/lib64/libarmnn_ndk.mtk.vndk.so
 vendor/lib64/libcmdl.so
 vendor/lib64/libcmdl_ndk.mtk.vndk.so
-vendor/lib64/libneuron_graph_delegate.mtk.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libneuron_graph_delegate.mtk.so
 vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so
 vendor/lib64/libnpagent.so
 vendor/lib64/libnpagent_server.so
-vendor/lib64/libtflite_mtk.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libtflite_mtk.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.1.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.2.so
@@ -1338,13 +1338,13 @@ vendor/lib/libvolte_core_shr.so
 vendor/lib/libvolte_xdmc_shr.so
 vendor/lib/libwo.so
 vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
-vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib64/libipsec_ims_shr.so
 vendor/lib64/libverno.so
 vendor/lib64/libwo.so
 vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
-vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
 # Secure Element
 vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
