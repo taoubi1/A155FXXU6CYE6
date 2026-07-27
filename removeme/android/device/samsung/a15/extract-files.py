@@ -44,6 +44,32 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    (
+        'vendor/bin/hw/android.hardware.security.keymint-service.samsung',
+        'vendor/lib64/lib_android_keymaster_skeymint_utils.so',
+        'vendor/lib64/libskeymint.so',
+        'vendor/lib64/libskeymint10device.so',
+        'vendor/lib64/libskeymint_cli.so',
+    ): blob_fixup()
+        .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so',
+            'android.hardware.security.keymint-V1-ndk.so')
+        .replace_needed('android.hardware.security.secureclock-V1-ndk_platform.so',
+            'android.hardware.security.secureclock-V1-ndk.so')
+        .replace_needed('android.hardware.security.sharedsecret-V1-ndk_platform.so',
+             'android.hardware.security.sharedsecret-V1-ndk.so')
+        .add_needed('android.hardware.security.rkp-V3-ndk.so')
+        .replace_needed('libkeymint.so', 'libskeymint.so')
+        .replace_needed('lib_android_keymaster_keymint_utils.so',
+            'lib_android_keymaster_skeymint_utils.so')
+        .replace_needed('libkeymaster_portable.so',
+            'libkeymaster_portable.samsung.so'),
+    'vendor/etc/init/android.hardware.security.keymint-service.samsung.rc': blob_fixup()
+        .regex_replace('android\\.hardware\\.security\\.keymint-service\n',
+            'android.hardware.security.keymint-service.samsung\n'),
+    'vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so': blob_fixup()
+        .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so',
+            'android.hardware.security.keymint-V1-ndk.so')
+        .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     ('vendor/bin/hw/android.hardware.gnss-service.mediatek', 'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so'): blob_fixup()
         .replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
     ('vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so', 'vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service'): blob_fixup()
