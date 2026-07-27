@@ -5,6 +5,10 @@
 			<Category name="Default"/>
 			<Category name="App1"/>
 			<Category name="App2"/>
+			<Category name="VxWifi_NB"/>
+			<Category name="VxWifi_WB"/>
+			<Category name="VxWifi_SWB"/>			
+			<Category name="3GVT"/>
 		</CategoryType>
 		<CategoryType name="Profile" wording="Device">
 			<CategoryGroup name="Handset">
@@ -54,5 +58,6 @@
 		<Param name="DV visibility" type="int"/>
 		<Param name="UL Gain Set" type="int"/>
 		<Param name="UL Gain Name" type="string_array"/>
+		<Param name="ModeParamExt visibility" type="int"/>
 	</ParamUnit>
 </ParamUnitDesc>

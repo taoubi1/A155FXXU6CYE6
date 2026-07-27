@@ -12,10 +12,11 @@
 			<Category name="HS" alias="Headset,4-pole headset,4_pole_Headset"/>
 			<Category name="HP" alias="3-pole headset,3_pole_Headset"/>
 			<Category name="SPK" alias="Hands-free,Hands-free 1mic NR,Hands-free no 1mic NR,Handsfree,MagiConference"/>
-			<Category name="BT earphone" alias="BT_Earphone,BT_NREC_Off"/>
+			<Category name="BT earphone" alias="BT_Earphone,BT_NREC_Off,ST_BLUETOOTH_PATH,BT_NSEC_OFF_PATH"/>
 			<Category name="HS5POLE" alias="5_pole_Headset,5-pole headset"/>
 			<Category name="HS5POLE_ANC" alias="5-pole headset+ANC,5_pole_Headset+ANC"/>
 			<Category name="USB" alias="Usb_Headset"/>
+			<Category name="SPKDOCK" alias="SPEAKERDOCK_PATH"/>
 			<Category name="HEARING_AID" alias="HEARING_AID"/>
 		</CategoryType>
 	</CategoryTypeList>

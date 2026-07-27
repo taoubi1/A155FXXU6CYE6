@@ -26,10 +26,10 @@
 			<Category name="FastRecord" visible="false"/>
 			<Category name="Unprocessed"/>
 			<Category name="IncallRecord"/>
-			<Category name="KTV" wording="In Ear Monitor"/>
+			<Category name="KTV" wording="In Ear Monitor" visible="false"/>
 		</CategoryType>
 		<CategoryType name="Profile" wording="Device">
-			<Category name="Handset"/>
+			<Category name="Handset" alias="FACTORY_RCV,FACTORY_SPK"/>
 			<Category name="Headset" alias="4-pole HS"/>
 			<Category name="HS5POLE" alias="5-pole HS"/>
 			<Category name="HS5POLE_ANC" alias="5-pole HS+ANC"/>

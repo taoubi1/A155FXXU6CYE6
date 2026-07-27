@@ -79,6 +79,11 @@
 		<Param name="ul_pga_3_mixer_name" type="string"/>
 		<Param name="ul_pga_4_mixer_name" type="string"/>
 
+		<Param name="fmrecord_idx_range_max" type="int"/>
+		<Param name="fmrecord_idx_range_min" type="int"/>
+		<Param name="step_per_db_fm" type="int"/>
+		<Param name="dec_rec_max_fm" type="int"/>
+
 		<Param name="stf_gain_map" type="short_array"/>
 	</ParamUnit>
 </ParamUnitDesc>

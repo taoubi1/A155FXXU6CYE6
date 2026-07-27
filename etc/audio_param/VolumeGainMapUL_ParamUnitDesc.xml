@@ -18,6 +18,8 @@
 			<Category name="USB" alias="USB Headset,Usb_Headset"/>
 			<Category name="HEARING_AID" alias="Hearing_Aid"/>
 			<Category name="MISC" alias="HFK_PATH,CALLFWD_PATH,SLD_PATH,SPEAKERDOCK_PATH,SPEAKERDOCK_EV_PATH"/>
+			<Category name="FACTORY_RCV"/>
+			<Category name="FACTORY_SPK"/>
 		</CategoryType>
 	</CategoryTypeList>
 	<ParamUnit>

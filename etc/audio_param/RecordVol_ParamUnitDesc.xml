@@ -14,7 +14,7 @@
 			<Category name="CUSTOMIZATION1" wording="ASR improvement" alias="ASR"/>
 			<Category name="VR" wording="Voice recognition"/>
 			<Category name="VoicePerformance" wording="Voice performance recording"/>
-			<Category name="KTV" wording="In Ear Monitor"/>
+			<Category name="KTV" wording="In Ear Monitor" visible="false"/>
 			<!-- not tunable -->
 			<Category name="VOICE_UNLOCK" alias="VoiceUnLk"/>
 			<Category name="CUSTOMIZATION2" alias="Customization2"/>
@@ -28,6 +28,8 @@
 			<Category name="HS5POLE" wording="Headset(5-pole)" alias="5-pole HS"/>
 			<Category name="HS5POLE_ANC" wording="Headset(5-pole+ANC)" alias="5-pole HS+ANC"/>
 			<Category name="USB" wording="USB" feature_option="MTK_AURISYS_FRAMEWORK_SUPPORT"/>
+			<Category name="FACTORY_RCV" wording="Factory_mic1"/>
+			<Category name="FACTORY_SPK" wording="Factory_mic2"/>
 		</CategoryType>
 	</CategoryTypeList>
 	<ParamUnit>

@@ -33,6 +33,8 @@
 			<Category name="BT_A2DP_HP" alias="BT A2DP HP"/>
 			<Category name="BT_A2DP_SPK" alias="BT A2DP SPK"/>
 			<Category name="HEARING_AID"/>
+			<Category name="FACTORY_RCV"/>
+			<Category name="FACTORY_SPK"/>
 		</CategoryType>
 	</CategoryTypeList>
 	<ParamUnit>

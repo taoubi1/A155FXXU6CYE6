@@ -2,11 +2,14 @@
 <ParamUnitDesc version="1.0">
     <CategoryTypeList>
         <CategoryType name="Network">
-            <Category name="GSM" />
+            <Category name="GSM"/>
+            <Category name="WCDMA"/>
+            <Category name="VoLTE"/>
+            <Category name="ViLTE"/>
+            <Category name="CDMA"/>
         </CategoryType>
     </CategoryTypeList>
-		<ParamUnit>
+    <ParamUnit>
         <Param name="speech_network_support" type="ushort_array"/>
-		</ParamUnit>
-
+    </ParamUnit>
 </ParamUnitDesc>

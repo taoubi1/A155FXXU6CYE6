@@ -17,7 +17,7 @@
 			<Category name="DTMF"/>
 			<Category name="TTS"/>
 			<Category name="Accessibility"/>
-			<Category name="Assistant"/>
+			<Category name="Assistant" visible="false"/>
 			<!--<Category name="MATV" feature_option="MATV_AUDIO_SUPPORT"/>-->
 		</CategoryType>
 		<CategoryType name="Profile" wording="Device">
@@ -27,12 +27,15 @@
 			<Category name="Speaker"/>
 			<Category name="Headset+Speaker"/>
 			<Category name="USB"/>
+			<Category name="RCV" wording="Receiver"/>
 			<Category name="HEARING_AID" feature_option="MTK_BT_HEARING_AID_SUPPORT" visible="false"/>
 			<CategoryGroup name="BT A2DP">
 				<Category name="BT A2DP"/>
 				<Category name="BT A2DP HP"/>
 				<Category name="BT A2DP SPK"/>
 			</CategoryGroup>
+			<Category name="FACTORY_RCV"/>
+			<Category name="FACTORY_SPK"/>
 		</CategoryType>
 	</CategoryTypeList>
 	<ParamUnit>

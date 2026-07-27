@@ -22,7 +22,8 @@
 			<Category name="VoicePerformance" wording="Voice performance recording" />
 			<Category name="VoiceUnLk" visible="false" />
 			<Category name="Customization2" visible="false" />
-			<Category name="KTV" wording="In Ear Monitor"/>
+			<Category name="KTV" wording="In Ear Monitor" visible="false" />
+			<Category name="IncallRecord"/>
 		</CategoryType>
 		<CategoryType name="Profile" wording="Device">
 			<Category name="Handset"/>
@@ -33,6 +34,8 @@
 			</CategoryGroup>
 			<Category name="BT earphone" wording="Bluetooth"/>
 			<Category name="USB" wording="USB" feature_option="MTK_AURISYS_FRAMEWORK_SUPPORT"/>
+			<Category name="FACTORY_RCV" wording="Factory_mic1"/>
+			<Category name="FACTORY_SPK" wording="Factory_mic2"/>
 		</CategoryType>
 	</CategoryTypeList>
 	<ParamUnit>
