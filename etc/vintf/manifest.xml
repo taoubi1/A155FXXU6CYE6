@@ -53,12 +53,6 @@
         <fqname>@1.3::IRadioConfig/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.secure_element</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.2::ISecureElement/SIM1</fqname>
-        <fqname>@1.2::ISecureElement/SIM2</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.soundtrigger</name>
         <transport>hwbinder</transport>
         <fqname>@2.3::ISoundTriggerHw/default</fqname>
@@ -79,22 +73,6 @@
         <fqname>@2.0::IFptoolFingerprint/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.aee</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.1::IAee/AEE</fqname>
-        <fqname>@1.1::IAee/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.camera.atms</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IATMs/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.camera.bgservice</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.1::IBGService/internal/0</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.camera.isphal</name>
         <transport>hwbinder</transport>
         <fqname>@1.1::IISPModule/internal/0</fqname>
@@ -103,20 +81,6 @@
         <name>vendor.mediatek.hardware.composer_ext</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IComposerExt/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.keymaster_attestation</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.1::IKeymasterDevice/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.log</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::ILog/ATMWiFiHidlServer</fqname>
-        <fqname>@1.0::ILog/ConnsysFWHidlServer</fqname>
-        <fqname>@1.0::ILog/LoggerHidlServer</fqname>
-        <fqname>@1.0::ILog/MobileLogHidlServer</fqname>
-        <fqname>@1.0::ILog/ModemLogHidlServer</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mmagent</name>
@@ -175,16 +139,6 @@
         <name>vendor.mediatek.hardware.videotelephony</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IVideoTelephony/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.trustonic.tee</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.1::ITee/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.trustonic.tee.tui</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::ITui/default</fqname>
     </hal>
     <sepolicy>
         <version>202504</version>
