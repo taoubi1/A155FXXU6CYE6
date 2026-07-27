@@ -1,7 +1,5 @@
 # Unpinned blobs from a15nsxx-user 15 AP3A.240905.015.A2 A155FXXS7CYI1 release-keys
 # Camera
-vendor/lib64/mt6789/libmtkcam_3rdparty.customer.so;SYMLINK=vendor/lib64/libmtkcam_3rdparty.customer.so
-vendor/lib64/mt6789/libmtkcam_metastore.so;SYMLINK=vendor/lib64/libmtkcam_metastore.so
 vendor/lib64/libcamera2ndk_vendor.so
 vendor/lib64/libremosaiclib.so
 vendor/lib64/librmsclib1.so
