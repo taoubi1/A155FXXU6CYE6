@@ -478,7 +478,7 @@ vendor/bin/hw/android.hardware.gnss-service.mediatek
 vendor/bin/bip
 vendor/etc/init/android.hardware.gnss-service.mediatek.rc
 vendor/etc/init/init.bip.rc
-vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk.xml
+vendor/etc/vintf/manifest/gnss-mtk.xml
 vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
