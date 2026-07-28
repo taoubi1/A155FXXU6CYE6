@@ -1,0 +1,44 @@
+rootdir
+sepolicy
+overlay
+check
+aosp-missing-blobs -r a15
+Warning: Could not read file: a15/lib64/hw/vulkan.mali.so
+Warning: Could not read file: a15/lib64/hw/gralloc.common.so
+Warning: Could not read file: a15/lib64/egl/libGLES_mali.so
+Warning: Could not read file: a15/lib64/arm.graphics-V3-ndk.so
+Warning: Could not read file: a15/lib64/arm.graphics-V1-ndk_platform.so
+Warning: Could not read file: a15/lib64/libgpudataproducer.so
+android.frameworks.cameraservice.service@2.1.so required by: libcamera2ndk_vendor.so
+libpuresoftkeymasterdevice.so required by: libskeymint.so
+android.frameworks.cameraservice.service@2.0.so required by: libcamera2ndk_vendor.so
+libarcsoft_MFNR.so required by: libmtkcam_3rdparty.customer.so
+android.hardware.keymaster@4.1.so required by: libskeymint_cli.so
+libGLESv3.so required by: libcamalgo.n3d.so
+android.hardware.nfc@1.1.so required by: nfc_nci_nxpsn.so
+camera.device@3.4-impl.so required by: vendor.samsung.hardware.camera.provider@4.0-legacy.so; vendor.samsung.hardware.camera.device@5.0-impl.so
+libimgproc_sw.unifunc@common.so required by: unihal_filter_unit.so
+libEGL.so required by: libcamalgo.warp.so; libcamalgo.utility.so; libcamalgo.n3d.so
+camera.device@3.2-impl.so required by: vendor.samsung.hardware.camera.provider@4.0-legacy.so; vendor.samsung.hardware.camera.device@5.0-impl.so
+camera.device@3.5-impl.so required by: vendor.samsung.hardware.camera.provider@4.0-legacy.so; vendor.samsung.hardware.camera.device@5.0-impl.so
+android.hardware.radio.deprecated@1.0.so required by: libril_sem.so
+android.frameworks.cameraservice.device@2.0.so required by: libcamera2ndk_vendor.so
+android.frameworks.cameraservice.device@2.1.so required by: libcamera2ndk_vendor.so
+android.frameworks.cameraservice.service@2.2.so required by: libcamera2ndk_vendor.so
+camera.device@3.3-impl.so required by: vendor.samsung.hardware.camera.provider@4.0-legacy.so; vendor.samsung.hardware.camera.device@5.0-impl.so
+libsnap_vndk.so required by: libDLInterface.camera.samsung.so
+android.hardware.keymaster@4.0.so required by: libskeymint_cli.so
+android.hardware.nfc@1.0.so required by: nfc_nci_nxpsn.so
+android.hardware.nfc@1.2.so required by: nfc_nci_nxpsn.so
+libvndksupport.so required by: libutils-v32.so; libhidlbase-v32.so; libbinder.so; libui.so; libhidlbase.so; libhardware.so; libutils.so; libutilscallstack.so
+libkeymaster_messages.so required by: libskeymint.so
+libkeymaster4_1support.so required by: libskeymint_cli.so
+libkeymaster4support.so required by: libskeymint_cli.so
+libGLESv2.so required by: libcamalgo.eis.so; libcamalgo.lmv.so; libcamalgo.warp.so; libcamalgo.utility.so
+camera.device@1.0-impl.so required by: vendor.samsung.hardware.camera.provider@4.0-legacy.so
+libGLESv1_CM.so required by: gralloc.common.so
+libgrallocusage.so required by: unihal_android.so
+libcppcose_rkp.so required by: libkeymaster_portable.samsung.so
+libmediandk.so required by: libcodec2_aidl.so; libmtkcam_hwnode.so; libcamera2ndk_vendor.so
+android.frameworks.cameraservice.common@2.0.so required by: libcamera2ndk_vendor.so
+libapexsupport.so required by: libbinder.so
