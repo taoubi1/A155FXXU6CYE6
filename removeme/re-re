@@ -86,8 +86,6 @@ vendor/etc/nn/ot/neuron_tracking.mdla3_0
 vendor/etc/permissions/android.hardware.fingerprint.xml
 vendor/etc/permissions/android.hardware.nfc.hce.xml
 vendor/etc/permissions/android.hardware.nfc.xml
-vendor/etc/permissions/android.hardware.sensor.gyroscope.xml
-vendor/etc/permissions/android.hardware.sensor.proximity.xml
 vendor/etc/permissions/android.hardware.se.omapi.uicc.xml
 vendor/etc/permissions/com.android.nfc_extras.xml
 vendor/etc/permissions/com.mediatek.hardware.vow_dsp.xml
