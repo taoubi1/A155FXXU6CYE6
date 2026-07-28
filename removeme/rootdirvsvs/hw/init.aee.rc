@@ -1,18 +1,17 @@
 on post-fs-data
 
-    mkdir /data/vendor/aee_exp 0775 root root
+    mkdir /data/vendor/aee_exp 0775 system system
     mkdir /data/vendor/dumpsys 0775 system system
     mkdir /data/vendor/core 0775 system system
     mkdir /data/vendor/tombstones 0775 system system
 
-on post-fs && property:ro.vendor.aee.convert64=0
-    start aee_aedv
-    start aee_aedv64
-    setprop ro.vendor.aee.enforcing no
 
-on post-fs && property:ro.vendor.aee.convert64=1
+on post-fs && property:ro.vendor.aee.convert64=1 && property:ro.boot.debug_level=0x494d
+    chmod 0666 /dev/aed0
     start aee_aedv64_v2
-    setprop ro.vendor.aee.enforcing no
+
+on init
+    setprop ro.vendor.aee.build.info customer
 
 on property:ro.vendor.aeev.dynamic.switch=disable && property:ro.vendor.aee.convert64=0
     stop aee_aedv

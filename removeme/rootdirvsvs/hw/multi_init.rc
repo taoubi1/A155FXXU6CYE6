@@ -45,12 +45,6 @@ import /vendor/etc/init/lights-mtk-lazy.rc
 import /vendor/etc/init/merged_hal_service.rc
 import /vendor/etc/init/spm_script.rc
 import /vendor/etc/init/nvram_daemon.rc
-#BSP:add integrate tranHwInfo to meta LCQHLYYLR-2213 by fengshan.wang 20200825 start
-import /vendor/etc/init/vendor.mediatek.hardware.tranHwInfo@1.0-service.rc
-#BSP:add integrate tranHwInfo to meta LCQHLYYLR-2213 by fengshan.wang 20200825 end
 import /vendor/etc/init/microtrust.bp_kmsetkey_ca.rc
 import /vendor/etc/init/vendor.microtrust.hardware.thh@2.0-service.rc
 import /vendor/etc/init/microtrust.init_thh.rc
-#BSP:add check AttestationKey CGCGJHRS-8997 by wang.qin 20211018 start
-import /vendor/etc/init/trustonic.mc_kmsetkey_ca.rc
-#BSP:add check AttestationKey CGCGJHRS-8997 by wang.qin 20211018 end

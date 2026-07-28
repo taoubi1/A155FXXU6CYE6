@@ -1,6 +1,10 @@
 import /vendor/etc/init/hw/init.mtkgki.rc
+import /vendor/etc/init/hw/init.sec.rc
 
 # MTK project .rc configure
+
+on early-init
+#	write /sys/class/udc/musb-hdrc/device/cmode 3
 
 on init
     mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
@@ -29,6 +33,14 @@ on post-fs-data
 
     chmod 0660 /dev/BU64745GWZAF
     chown system camera /dev/BU64745GWZAF
+
+    #Create TP_MFNR mount point
+    chown root system /vendor/etc/tp_mfnr/
+    chmod 0771 /vendor/etc/tp_mfnr/
+
+    #Create TP_SFNR mount point
+    chown root system /vendor/etc/tp_sfnr/
+    chmod 0771 /vendor/etc/tp_sfnr/
 
 #SMB
     chown system system /proc/smb/ScreenComm
@@ -59,8 +71,3 @@ on property:sys.boot_completed=1
     write /sys/kernel/tracing/instances/mmstat/buffer_size_kb 16
     write /sys/kernel/tracing/instances/mmstat/events/mmstat/enable 1
     write /sys/kernel/tracing/instances/mmstat/tracing_on 1
-
-#SPD: modify for swap zram write-back by shuang.zhou at 20201020 start
-on property:sys.boot_completed=1
-    swapon_all /vendor/etc/memfusion2/fstab.enableswap
-#SPD: modify for swap zram write-back by shuang.zhou at 20201020 end
