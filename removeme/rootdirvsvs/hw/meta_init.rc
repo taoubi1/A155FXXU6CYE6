@@ -11,6 +11,7 @@ import /vendor/etc/init/trustonic.rc
 import ${ro.vendor.rc}meta_init.connectivity.rc
 import /vendor/etc/init/hw/meta_init.project.rc
 import /vendor/etc/init/microtrust.rc
+import /vendor/etc/init/teegris.rc
 import /vendor/etc/init/android.hardware.boot@1.2-service.rc
 import /vendor/etc/init/android.hardware.boot@1.2-service-lazy.rc
 import /vendor/etc/init/android.hardware.health@2.1-service.rc
@@ -53,12 +54,6 @@ import /vendor/etc/init/nvram_daemon.rc
 import /vendor/etc/init/microtrust.bp_kmsetkey_ca.rc
 import /vendor/etc/init/vendor.microtrust.hardware.thh@2.0-service.rc
 import /vendor/etc/init/microtrust.init_thh.rc
-#BSP:add check attestkey XLQLBH-10 by wang.qin 20220412 start
-import /vendor/etc/init/trustonic.mc_kmsetkey_ca.rc
-#BSP:add check attestkey XLQLBH-10 by wang.qin 20220412 end
-#BSP:add meta features XLQLBH-14 by wang.qin 20220412 start
-import /vendor/etc/init/vendor.mediatek.hardware.tranHwInfo@1.0-service.rc
-#BSP:add meta features XLQLBH-14 by wang.qin 20220412 end
 #end
 
 #Make sure meta_init.modem.rc is the last rc file.
@@ -86,9 +81,6 @@ on init
     write /proc/bootprof "INIT:init"
     write /proc/bootprof "INIT: on init start"
 
-    #BSP:add meta features XLQLBH-14 by wang.qin 20220412 start
-    chmod 0444 /proc/cmdline
-    #BSP:add meta features XLQLBH-14 by wang.qin 20220412 end
     # Backward compatibility.
     symlink /system/bin /bin
     symlink /system/etc /etc
@@ -122,9 +114,6 @@ on init
 #INTERNAL_END
 
     start hidl_memory
-    #BSP:add meta features XLQLBH-14 by wang.qin 20220412 start
-    start vendor.tranhwinfo-1-0
-    #BSP:add meta features XLQLBH-14 by wang.qin 20220412 end
 
 
 # Load properties from /system/ + /factory after fs mount.
@@ -236,13 +225,6 @@ on post-fs-data
 
     # RTC
     mkdir /data/misc/rtc 0770 system system
-    #BSP:add meta features XLQLBH-14 by wang.qin 20220412 start
-    chmod 0666 /dev/rtc0
-    #BSP:add meta features XLQLBH-14 by wang.qin 20220412 end
-
-#BSP:add enable rtc_test CGCGJHRS-8106 by zheyi.bai 20220405 start
-    chmod 0666 /dev/rtc0
-#BSP:add enable rtc_test CGCGJHRS-8106 by zheyi.bai 20220405 end
 
     # Android SEC related device nodes
     chmod 0660 /dev/sec
@@ -310,17 +292,15 @@ service loghidlvendorservice /vendor/bin/loghidlvendorservice
     group system shell radio
 
 service meta_tst /vendor/bin/meta_tst
-    user root
+    user system
     group radio system wifi audio bluetooth media gps
     socket meta-atci stream 660 radio system
 
 service factory_no_image /vendor/bin/factory
     user root
     group radio system wifi media gps audio bluetooth wakelock nfc
-#BSP:add enable rtc_test CGCGJHRS-8106 by zheyi.bai 20220405 start
- capabilities BLOCK_SUSPEND NET_RAW NET_ADMIN SYS_ADMIN SYS_BOOT SYS_TIME
-#BSP:add enable rtc_test CGCGJHRS-8106 by zheyi.bai 20220405 end
-    socket factory-atci stream 660 radio system
+    capabilities BLOCK_SUSPEND NET_RAW NET_ADMIN SYS_ADMIN SYS_BOOT
+    socket factory-atci stream 660 radio system	
 
 service atcid-daemon-u /vendor/bin/atcid
     interface vendor.mediatek.hardware.atci@1.0::IAtcid default
@@ -404,9 +384,3 @@ on property:persist.vendor.mediatek.fast_charging.support=*
     write /sys/devices/platform/charger/fast_chg_indicator ${persist.vendor.mediatek.fast_charging.support}
 
 #INTERNAL_END
-#BSP:add meta features XLQLBH-14 by wang.qin 20220412 start
-#TRANSSION_START
-on property:persist.vendor.tran.wipedata=1
-    tran_factory_reset
-#TRANSSION_END
-#BSP:add meta features XLQLBH-14 by wang.qin 20220412 end
