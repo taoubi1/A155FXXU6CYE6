@@ -435,7 +435,6 @@ vendor/bin/wmt_loader
 vendor/etc/init/init.wmt_drv.rc
 
 # Display
-vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/AbnormalDisplayLog_dynamic.xml
 vendor/etc/VideoLog_dynamic.xml
 vendor/lib/egl/egl.cfg
