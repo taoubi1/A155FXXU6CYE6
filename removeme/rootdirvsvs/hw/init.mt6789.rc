@@ -43,10 +43,6 @@ on init
 
     mkdir /mnt/cd-rom 0000 system system
 
-#MD:add XLQYXLQS-5252 for tranfs by xiaoxiang.xiong 20220404 start
-mkdir /tranfs 0771 system system
-#MD:add XLQYXLQS-5252 for tranfs by xiaoxiang.xiong 20220404 end
-
 # change lk_env permission
     chown root system /proc/lk_env
     chmod 0660 /proc/lk_env
@@ -71,10 +67,8 @@ on late-init
 
 on charger
 
-    #MD:delete XLBELHQQS-6425 for cache by xiaoxiang.xiong 20220616 start
     exec /system/bin/e2fsck -f -p /dev/block/by-name/cache
     mount ext4 /dev/block/by-name/cache /cache rw wait
-    #MD:delete XLBELHQQS-6425 for cache by xiaoxiang.xiong 20220616 end
     chmod 0660 /dev/spm
     chown system system /dev/spm
     start spm_script
@@ -178,12 +172,6 @@ on post-fs
     # allow ccci_mdinit access ccci_dump
     chown root system /proc/ccci_dump
 
-    #STD:add ffu upgrade KFLJHLEYB-2005 by xiaoxiang.xiong 20221017 start
-    restorecon_recursive /tranfs
-    mkdir /tranfs/ffu 0700 system shell
-    chmod 0777 /tranfs/ffu
-    #STD:add ffu upgrade KFLJHLEYB-2005 by xiaoxiang.xiong 20221017 end
-
 on post-fs-data
     write /proc/bootprof "INIT:post-fs-data"
     wait_for_prop vendor.all.modules.ready 1
@@ -219,11 +207,6 @@ on post-fs-data
     chown system system /mnt/vendor/nvcfg/fg
     chown system system /mnt/vendor/nvcfg/fg/old_fg_data
     chown system system /mnt/vendor/nvcfg/fg/car_tune_value
-
-#MD:add XLQYXLQS-5252 for tranfs by xiaoxiang.xiong 20220404 start
-    chown system system /tranfs
-    chmod 0777 /tranfs
-#MD:add XLQYXLQS-5252 for tranfs by xiaoxiang.xiong 20220404 end
 
     # create basic filesystem structure
     # We chown/chmod /mnt/vendor/nvdata again so because mount is run as root + defaults
@@ -265,10 +248,6 @@ on post-fs-data
     mkdir /data/vendor/flicker
     chown root system /data/vendor/flicker
     chmod 0771 /data/vendor/flicker
-
-#MD:add XLQYXLQS-5252 for tranfs by xiaoxiang.xiong 20220404 start
-    restorecon_recursive /tranfs
-#MD:add XLQYXLQS-5252 for tranfs by xiaoxiang.xiong 20220404 end
 
     # Set SELinux security contexts on upgrade or policy update.
     restorecon_recursive /mnt/vendor/nvdata
@@ -597,30 +576,6 @@ on post-fs-data
     chmod 0660 /dev/apusys
     chmod 0660 /dev/mtk_ccd
 
-#ITD: Modify Camera By Yingji.Wang 220426 Start
-    #OIS
-    chmod 0660 /dev/dw9781_ois
-    #OIS
-    chown system camera /dev/dw9781_ois 
-    #DualCam
-    mkdir /data/vendor/arcsoft 0777 system system
-    #tranDualCam
-    mkdir /data/vendor/multicam  0777 system system
-    mkdir /data/vendor/multicam/dualcam  0777 system system
-    #tranSAT
-    mkdir /data/vendor/multicam/sat 0777 system system
-#ITD: Modify Camera By Yingji.Wang 220426 end
-
-#ITD:modify by camera driver junfeng.qin5 20220501 start
-    #MEG-fullHDR
-    mkdir /data/vendor/meg_working_dir 0777 system system
-    mkdir /data/vendor/meg_working_dir/anc_fullhdr 0777 system system
-    #MEG-HUMANEFFECT
-    mkdir /data/vendor/meghumaneffect 0777 system system
-    #watermark 2.0
-    mkdir /data/vendor/camera_watermark 0777 system system
-#ITD:modify by camera driver junfeng.qin5 20220501 end
-
     chown system camera /dev/camera-sysram
     chown system camera /dev/camera-isp
     chown system camera /dev/camera-mem
@@ -786,17 +741,6 @@ on boot
     chmod 0664 /sys/class/leds/lcd-backlight/brightness
     chown system system /sys/class/leds/lcd-backlight/brightness
 
-    #BSP:add for charger&led midtest by lei.shi5 20220505 start
-    chmod 0666 /dev/MT_pmic_adc_cali
-    chmod 0666 /sys/class/leds/red/brightness
-    chmod 0666 /sys/class/leds/blue/brightness
-    chmod 0666 /sys/class/leds/green/brightness
-    chmod 0666 /sys/devices/platform/odm/odm:tran_battery/tran_bat_temp
-    chmod 0666 /sys/devices/platform/odm/odm:tran_battery/CHG_CAPACITY_TEST
-    chmod 0666 /sys/devices/platform/odm/odm:tran_battery/tran_set_current
-    chmod 0666 /sys/devices/platform/charger/Charger_Type
-    #BSP:add for charger&led midtest by lei.shi5 20220505 end
-
     chown system system /sys/devices/system/cpu/cpufreq/hotplug/cpu_num_base
     chmod 0660 /sys/devices/system/cpu/cpufreq/hotplug/cpu_num_base
     chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
@@ -822,11 +766,6 @@ on boot
     chown system system /sys/class/leds/red/trigger
     chown system system /sys/class/leds/green/trigger
     chown system system /sys/class/leds/blue/trigger
-
-#ITD:add flashlight by isp team 20220412 start
-    chmod 0666 /sys/devices/virtual/torch/torch/torch_level
-    chmod 0666 /sys/devices/virtual/sub_torch/sub_torch/sub_torch_level
-#ITD:add flashlight by isp team 20220412 end
     # gauge symbolic
     symlink /sys/devices/platform/soc/10026000.pwrap/10026000.pwrap:mt6366/mt6358-gauge /dev/gauge
 
@@ -1127,9 +1066,4 @@ service osi /system/bin/osi
     disabled
     oneshot
     #seclabel u:r:osi:s0
-
-#BSP:add meta features XLQLBH-14 by wang.qin 20220412 start
-on property:persist.vendor.tran.wipedata=1 && property:ro.boot.atm=enable
-    tran_factory_reset
-#BSP:add meta features XLQLBH-14 by wang.qin 20220412 end
 
