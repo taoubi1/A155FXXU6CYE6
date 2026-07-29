@@ -323,6 +323,7 @@ ro.product.board=a15
 ro.board.platform=mt6789
 ro.hwui.use_vulkan=true
 ro.sf.lcd_density=450
+ro.build.ab_update=false
 ####################################
 # from variable PRODUCT_VENDOR_PROPERTIES
 ####################################
