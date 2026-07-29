@@ -2,18 +2,18 @@
 # from generate-common-build-props
 # These properties identify this partition image.
 ####################################
-ro.product.odm.brand=TECNO
-ro.product.odm.device=LG7n
-ro.product.odm.manufacturer=TECNO
-ro.product.odm.model=TECNO LG7n
-ro.product.odm.name=yaap_LG7n
+ro.product.odm.brand=samsung
+ro.product.odm.device=a15
+ro.product.odm.manufacturer=samsung
+ro.product.odm.model=SM-A155F
+ro.product.odm.name=a15nsxx
 ro.odm.build.date=Thu Jul  9 07:06:51 UTC 2026
 ro.odm.build.date.utc=1783580811
-ro.odm.build.fingerprint=TECNO/LG7n-GL/TECNO-LG7n:12/SP1A.210812.016/240530V1767:user/release-keys
+ro.odm.build.fingerprint=samsung/a15nsxx/a15:12/SP1A.210812.016/A155FXXU6CYE6:user/release-keys
 ro.odm.build.id=BP4A.251205.006
 ro.odm.build.tags=release-keys
 ro.odm.build.type=user
-ro.odm.build.version.incremental=eng.androi.20260709.070651
+ro.odm.build.version.incremental=A155FXXU6CYE6
 ro.odm.build.version.release=16
 ro.odm.build.version.release_or_codename=16
 ro.odm.build.version.sdk=36
