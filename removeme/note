@@ -42,3 +42,10 @@ libcppcose_rkp.so required by: libkeymaster_portable.samsung.so
 libmediandk.so required by: libcodec2_aidl.so; libmtkcam_hwnode.so; libcamera2ndk_vendor.so
 android.frameworks.cameraservice.common@2.0.so required by: libcamera2ndk_vendor.so
 libapexsupport.so required by: libbinder.so
+
+
+*********************
+vendor/lib64/libkeymaster4_1support.so
+vendor/lib64/libkeymaster4support.so
+vendor/lib64/libkeymaster_messages.so
+***************
